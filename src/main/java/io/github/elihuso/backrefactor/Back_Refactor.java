@@ -1,5 +1,6 @@
 package io.github.elihuso.backrefactor;
 
+import io.github.elihuso.backrefactor.listener.PlayerTeleportListener;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -15,7 +16,7 @@ public final class Back_Refactor extends JavaPlugin {
     @Override
     public void onEnable() {
         // Plugin startup logic
-
+        Bukkit.getPluginManager().registerEvents(new PlayerTeleportListener(this), this);
     }
 
     @Override
