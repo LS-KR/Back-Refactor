@@ -1,0 +1,14 @@
+name: Back-Refactor
+version: '${version}'
+main: io.github.elihuso.backrefactor.Back_Refactor
+api-version: '1.20'
+
+commands:
+  back:
+    description: "Back to your previous location"
+    permission: backrefactor.back
+    permission-message: "Permission Denied."
+
+permissions:
+  backrefactor.back:
+    default: true
