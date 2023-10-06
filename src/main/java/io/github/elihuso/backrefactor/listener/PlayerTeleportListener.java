@@ -40,6 +40,8 @@ public class PlayerTeleportListener implements Listener {
 
     @EventHandler
     public void OnPlayerRespawn(PlayerRespawnEvent event) {
+        if (event.getRespawnReason().equals(PlayerRespawnEvent.RespawnReason.END_PORTAL))
+            return;
         event.getPlayer().addPotionEffect(new PotionEffect(PotionEffectType.DAMAGE_RESISTANCE, 900, 4, true, false, true));
     }
 
